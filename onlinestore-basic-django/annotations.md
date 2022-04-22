@@ -1,0 +1,21 @@
+-Useful steps/commands:
+- Creating a virtual environment for python3:
+    - python3 -m venv venv
+    - source venv/bin/activate
+    - pip install django
+    - pip install pillow
+    
+- django-admin startproject onlinestore
+- python manage.py migrate
+- python manage.py createsuperuser
+- python manage.py startapp products
+    - add 'products' to 'INSTALLED_APP' on settings.py
+- create models
+    - python manage.py makemigrations
+    - python manage.py migrate
+- create views
+- create urls
+- Because we will use images during development, add in the main urls.py:
+    - from django.conf.urls.static import static
+    - from django.conf import settings
+- docker-compose run app sh -c "python manage.py test && flake8"
